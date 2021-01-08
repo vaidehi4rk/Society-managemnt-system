@@ -1,0 +1,13 @@
+SMAP
+nominate_jsp.java
+JSP
+*S JSP
+*F
++ 0 nominate.jsp
+nominate.jsp
+*L
+5,14:47
+18,145:61
+165:209,2
+166,51:211
+*E

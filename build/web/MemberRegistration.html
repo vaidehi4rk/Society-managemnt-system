@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+        <style>
+            body {
+                /*                background: #33A1DE;*/
+                /*                                background:linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3)), url('images/adminbuilding.jpg') no-repeat ;
+                                                background-size: cover;*/
+              
+                background: linear-gradient(135deg,#e1e1e1  25%, transparent 25%) -50px 0,
+                    linear-gradient(225deg, #e1e1e1 25%, transparent 25%) -50px 0,
+                    linear-gradient(315deg, #e1e1e1 25%, transparent 25%),
+                    linear-gradient(45deg, #e1e1e1 25%, transparent 25%);
+                background-size: 100px 100px;
+                background-color: #cfd8dc;
+
+                         }
+
+            .navbar 
+            {
+                font-family: Montserrat;
+                margin-bottom: 0;
+                background-color: #000000;
+                border: 0;
+                font-size: 15px;
+                letter-spacing: 4px;
+                opacity: 0.9;
+
+
+            }
+            .container-fluid 
+            {
+                padding: 20px;
+
+            }
+
+            .container{
+                margin-top: 10px;
+                margin:50px;
+            }
+            .myform
+            {
+                background-color: #F8F8FF;
+                height:920px;
+                position: absolute;                
+                top: 30%;
+                left: 35%;               
+                margin: -100px 0 40px -150px;
+                border-radius: 7px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-toggler navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-brand">
+                    <span><a href="index.html"><i class="fas fa-home fa-lg fa-spin"></i></a></span>
+                </div>
+
+                <!--login links-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="AdminLogin.html"><span class="glyphicon glyphicon-user"></span> ADMIN </a></li>
+                    <li><a href="UserLogin.html"><span class="glyphicon glyphicon-user fa-spin"></span> USER </a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <br> 
+        <div class="col-md-6 myform col-sm-4 ">
+            <form style="margin-top: 20px" action="register.jsp">
+                <div class="form-row">
+                    <div class="form-group ">
+                        <label >Flat Owner Name</label>
+                        <input type="text" class="form-control" name="name" required="" oninvalid="this.setCustomValidity('Please write your name')" oninput="setCustomValidity('')" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group ">
+                        <label>Username </label>
+                        <input type="text" class="form-control" name="uname" required="" oninvalid="this.setCustomValidity('Please write your useraname')" oninput="setCustomValidity('')" placeholder="Username for login">
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label>Gender</label>
+                    <select id="gender" name="gender" class="form-control" oninvalid="this.setCustomValidity('Please Select your gender')" oninput="setCustomValidity('')">
+                        <option name="gender" value="male">male</option>
+                        <option name="gender" value="female">female</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="text" class="form-control" maxlength="10" name="contact" required="" oninvalid="this.setCustomValidity('Please write your contact number')" oninput="setCustomValidity('')" placeholder="Contact number">
+                </div>
+
+                <div class="form-group">
+                    <label>Emergency Contact Number</label>
+                    <input type="text" class="form-control" maxlength="10" name="econtact" required="" oninvalid="this.setCustomValidity('Please write your emergency contact number')" oninput="setCustomValidity('')" placeholder="Emergency contact number">
+                </div>
+
+                <div class="form-group ">
+                    <label>Wing</label>
+                    <select id="wing" name="wing" class="form-control" oninvalid="this.setCustomValidity('Please Select your gender')" oninput="setCustomValidity('')">
+                        <option name="wing" value="A">A</option>
+                        <option name="wing" value="B">B</option>
+                        <option name="wing" value="C">C</option>
+                        <option name="wing" value="D">D</option>
+                        <option name="wing" value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Floor</label>
+                    <input type="text" class="form-control" maxlength="2" name="floor" required="" oninvalid="this.setCustomValidity('Please write your floor number')" oninput="setCustomValidity('')" placeholder="Enter floor number">
+                </div>
+                <div class="form-group">
+                    <label>Room Number</label>
+                    <input type="text" class="form-control"   name="roomno" required="" oninvalid="this.setCustomValidity('Please write your room number')" oninput="setCustomValidity('')" placeholder="Enter Room number">
+                </div>
+                <div class="form-group ">
+                    <label>Flat Type</label>
+                    <select id="ftype" name="ftype" class="form-control" oninvalid="this.setCustomValidity('Please Select your flat type')" oninput="setCustomValidity('')">
+                        <option name="ftype" value="1RK">1RK</option>
+                        <option name="ftype" value="1BHK">1BHK</option>
+                        <option name="ftype" value="2BHK">2BHK</option>
+                        <option name="ftype" value="3BHK">3BHK</option>                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="form-control"  name="password" required="" oninvalid="this.setCustomValidity('Please write password')" oninput="setCustomValidity('')" placeholder="Enter password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="text" class="form-control"  required="" oninvalid="this.setCustomValidity('Please confirm password')" oninput="setCustomValidity('')" placeholder="Enter confirm password">
+                </div>
+
+
+                <div class="text-center"><button type="submit" class="btn btn-primary">Sign in</button></div>
+                <br>
+
+            </form>
+            <div class="text-center"><a href="UserLogin.html">Already a user? Sign In</a></div>        
+
+        </div>
+    </body>
+</html>
